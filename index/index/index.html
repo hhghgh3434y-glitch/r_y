@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رؤية السعودية 2030 - مشروع نيوم والقطاع المالي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap">
+    <style>
+        /* متغيرات الألوان */
+        :root {
+            --primary-green: #006400;
+            --primary-blue: #00008B;
+            --gold: #FFD700;
+            --neom-teal: #00B4B4;
+            --finance-purple: #800080;
+            --text-dark: #333333;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #6c757d;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+            --border-radius: 12px;
+        }
+
+        /* إعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        /* التصميم العام */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* شريط التنقل */
+        .navbar {
+            background: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+            color: white;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            color: var(--gold);
+            font-size: 2.2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .nav-icon {
+            font-size: 1.1rem;
+        }
+
+        /* قسم البداية */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* الأزرار */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            min-width: 180px;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--text-dark);
+        }
+
+        .btn-primary:hover {
+            background: #ffed4e;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--text-dark);
+            transform: translateY(-5px);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* الأقسام */
+        .section {
+            padding: 100px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* بطاقات المشاريع */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .project-header {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header.neom {
+            background: linear-gradient(135deg, var(--neom-teal), #008080);
+        }
+
+        .project-header.finance {
+            background: linear-gradient(135deg, var(--finance-purple), #9932CC);
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            color: var(--text-dark);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow);
+            z-index: 2;
+        }
+
+        .project-icon {
+            position: absolute;
+            bottom: -30px;
+            right: 30px;
+            background: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: var(--shadow);
+            z-index: 2;
+        }
+
+        .neom-icon {
+            color: var(--neom-teal);
+        }
+
+        .finance-icon {
+            color: var(--finance-purple);
+        }
+
+        .project-content {
+            padding: 40px 30px 30px;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            padding-right: 90px;
+        }
+
+        .project-description {
+            color: var(--dark-gray);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        /* الإحصائيات */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            background: var(--light-gray);
+            padding: 25px 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            background: var(--medium-gray);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        /* شريط التقدم */
+        .progress-container {
+            margin: 30px 0;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .progress-title {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .progress-percentage {
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .progress-bar {
+            height: 12px;
+            background: var(--medium-gray);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1.5s ease;
+        }
+
+        .neom-progress {
+            background: linear-gradient(90deg, var(--neom-teal), #008080);
+            width: 45%;
+        }
+
+        .finance-progress {
+            background: linear-gradient(90deg, var(--finance-purple), #9932CC);
+            width: 60%;
+        }
+
+        /* الجدول الزمني */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 80px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: var(--gold);
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            right: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            right: 50%;
+        }
+
+        .timeline-content {
+            padding: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-year {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-details {
+            color: var(--dark-gray);
+        }
+
+        .timeline-details p {
+            margin-bottom: 10px;
+        }
+
+        /* محاكاة الاستثمار */
+        .simulation-section {
+            background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+            border-radius: var(--border-radius);
+            padding: 60px;
+            margin: 60px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .simulation-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .simulation-title {
+            font-size: 2.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .simulation-subtitle {
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .simulation-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .control-panel {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .control-title {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .control-icon {
+            font-size: 1.6rem;
+        }
+
+        .slider-group {
+            margin-bottom: 25px;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .slider-value {
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .slider {
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            background: var(--medium-gray);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* النتائج */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .result-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .result-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin: 15px 0;
+            line-height: 1;
+        }
+
+        .result-label {
+            color: var(--dark-gray);
+            font-size: 1rem;
+        }
+
+        /* المخطط البياني */
+        .chart-section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 50px;
+            margin: 60px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .chart-container {
+            height: 350px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .chart-bars {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 100%;
+            padding: 0 40px;
+        }
+
+        .chart-bar {
+            width: 70px;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            transition: height 1s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bar-neom {
+            background: linear-gradient(to top, var(--neom-teal), #00d4d4);
+            height: 70%;
+        }
+
+        .bar-finance {
+            background: linear-gradient(to top, var(--finance-purple), #a64dff);
+            height: 50%;
+        }
+
+        .bar-infra {
+            background: linear-gradient(to top, #4CAF50, #8BC34A);
+            height: 60%;
+        }
+
+        .bar-tech {
+            background: linear-gradient(to top, #2196F3, #03A9F4);
+            height: 80%;
+        }
+
+        .bar-research {
+            background: linear-gradient(to top, #FF9800, #FFB74D);
+            height: 45%;
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -40px;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: center;
+            width: 100%;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -35px;
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+        }
+
+        /* المقارنة */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .comparison-header {
+            margin-bottom: 30px;
+        }
+
+        .comparison-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .neom-comparison .comparison-icon {
+            color: var(--neom-teal);
+        }
+
+        .finance-comparison .comparison-icon {
+            color: var(--finance-purple);
+        }
+
+        .integration-comparison .comparison-icon {
+            color: var(--primary-green);
+        }
+
+        .comparison-title {
+            font-size: 1.6rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .comparison-list {
+            list-style: none;
+            text-align: right;
+            margin-top: 25px;
+        }
+
+        .comparison-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--medium-gray);
+            position: relative;
+            padding-right: 35px;
+        }
+
+        .comparison-list li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* الفوتر */
+        .footer {
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+            color: white;
+            padding: 80px 0 30px;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--gold);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            transform: translateX(-5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--gold);
+            color: var(--text-dark);
+            transform: translateY(-5px);
+        }
+
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #333;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 25px;
+            transition: var(--transition);
+        }
+
+        .github-button:hover {
+            background: #444;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* النموذج المنبثق */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 50px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close-modal:hover {
+            background: var(--light-gray);
+            color: var(--primary-blue);
+        }
+
+        .modal-title {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--medium-gray);
+        }
+
+        /* الرسوم المتحركة */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* التجاوب */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.4rem;
+            }
+            
+            .timeline::after {
+                right: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-right: 70px;
+                padding-left: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                right: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                height: 60px;
+            }
+            
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero {
+                margin-top: 60px;
+            }
+            
+            .hero-title {
+                font-size: 2.4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section {
+                padding: 60px 15px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .simulation-section {
+                padding: 40px 20px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-content {
+                padding: 30px 20px;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .result-value {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-flag logo-icon"></i>
+                <span>رؤية السعودية 2030</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link"><i class="fas fa-home nav-icon"></i>الرئيسية</a></li>
+                <li><a href="#neom" class="nav-link"><i class="fas fa-city nav-icon"></i>مشروع نيوم</a></li>
+                <li><a href="#finance" class="nav-link"><i class="fas fa-chart-line nav-icon"></i>القطاع المالي</a></li>
+                <li><a href="#timeline" class="nav-link"><i class="fas fa-calendar-alt nav-icon"></i>الجدول الزمني</a></li>
+                <li><a href="#simulation" class="nav-link"><i class="fas fa-calculator nav-icon"></i>المحاكاة</a></li>
+                <li><a href="#comparison" class="nav-link"><i class="fas fa-balance-scale nav-icon"></i>المقارنة</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- قسم البداية -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">رؤية السعودية 2030: بناء مستقبل واعد</h1>
+            <p class="hero-subtitle">استكشف مشروعي نيوم وتطوير القطاع المالي، الركيزتان الأساسيتان لتحقيق التحول الاقتصادي والتنموي في المملكة العربية السعودية</p>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="scrollToSection('neom')">
+                    <i class="fas fa-city"></i>اكتشف نيوم
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('finance')">
+                    <i class="fas fa-chart-line"></i>القطاع المالي
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- مشروع نيوم -->
+    <section id="neom" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مشروع نيوم - مدينة المستقبل</h2>
+                <p class="section-subtitle">أكبر مشروع حضري في العالم، صُمم ليكون نموذجاً للمدن الذكية والمستدامة في القرن الحادي والعشرين</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card animate">
+                    <div class="project-header neom">
+                        <div class="project-badge">مشروع عالمي</div>
+                        <div class="project-icon neom-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">مدينة نيوم الذكية</h3>
+                        <p class="project-description">مدينة المستقبل التي تعمل بالطاقة النظيفة بنسبة 100%، تجمع بين التقنية المتقدمة والاستدامة البيئية في بيئة معيشية استثنائية.</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number" id="neomArea">26,500</span>
+                                <span class="stat-label">كم² المساحة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="neomInvestment">500</span>
+                                <span class="stat-label">مليار دولار</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="neomJobs">380,000</span>
+                                <span class="stat-label">وظيفة جديدة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="neomCapacity">9</span>
+                                <span class="stat-label">مليون نسمة</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-header">
+                                <span class="progress-title">التقدم التنفيذي</span>
+                                <span class="progress-percentage" id="neomProgressText">45%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill neom-progress" id="neomProgressBar"></div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="showModal('neom')" style="margin-top: 20px; width: 100%;">
+                            <i class="fas fa-info-circle"></i>تفاصيل المشروع
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card animate" style="animation-delay: 0.2s;">
+                    <div class="project-header" style="background: linear-gradient(135deg, #00B4B4, #008080);">
+                        <div class="project-badge">رؤية مستقبلية</div>
+                        <div class="project-icon neom-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">مميزات نيوم الفريدة</h3>
+                        <ul class="comparison-list">
+                            <li>مدينة خطية بطول 170 كم (THE LINE)</li>
+                            <li>طاقة متجددة بنسبة 100%</li>
+                            <li>وسائل نقل ذاتي القيادة</li>
+                            <li>الذكاء الاصطناعي في كل مكان</li>
+                            <li>نظام بيئي مستدام كامل</li>
+                            <li>مركز عالمي للابتكار والبحث</li>
+                            <li>مجتمع رقمي متكامل</li>
+                            <li>بنية تحتية ذكية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القطاع المالي -->
+    <section id="finance" class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">برنامج تطوير القطاع المالي</h2>
+                <p class="section-subtitle">تحويل المملكة إلى مركز مالي إقليمي وعالمي من خلال تطوير شامل للنظام المالي السعودي</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card animate">
+                    <div class="project-header finance">
+                        <div class="project-badge">تحول اقتصادي</div>
+                        <div class="project-icon finance-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">تطوير النظام المالي</h3>
+                        <p class="project-description">برنامج طموح يهدف إلى تنويع الاقتصاد وتعزيز مكانة المملكة كمركز مالي رائد في المنطقة والعالم.</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number" id="financeAssets">4.6</span>
+                                <span class="stat-label">تريليون ريال</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="financeGDP">6.6</span>
+                                <span class="stat-label">% في الناتج</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="financeJobsTarget">230,000</span>
+                                <span class="stat-label">وظيفة مستهدفة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="financeFintech">200</span>
+                                <span class="stat-label">شركة FinTech</span>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-header">
+                                <span class="progress-title">التقدم التنفيذي</span>
+                                <span class="progress-percentage" id="financeProgressText">60%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill finance-progress" id="financeProgressBar"></div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="showModal('finance')" style="margin-top: 20px; width: 100%;">
+                            <i class="fas fa-info-circle"></i>تفاصيل البرنامج
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card animate" style="animation-delay: 0.2s;">
+                    <div class="project-header" style="background: linear-gradient(135deg, #800080, #9932CC);">
+                        <div class="project-badge">محاور رئيسية</div>
+                        <div class="project-icon finance-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">محاور التطوير المالي</h3>
+                        <ul class="comparison-list">
+                            <li>تطوير سوق رأس المال السعودي</li>
+                            <li>تعزيز قطاع التمويل الإسلامي</li>
+                            <li>تنمية سوق التأمين والتأمين الصحي</li>
+                            <li>التحول الرقمي في الخدمات المالية</li>
+                            <li>دعم الشمول المالي الرقمي</li>
+                            <li>جذب الاستثمارات الأجنبية المباشرة</li>
+                            <li>تطوير أسواق الصكوك والسندات</li>
+                            <li>تعزيز الحوكمة والشفافية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الجدول الزمني -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">الجدول الزمني للمشاريع</h2>
+                <p class="section-subtitle">رحلة التحول الاقتصادي من 2020 إلى 2030</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item animate">
+                    <div class="timeline-content">
+                        <div class="timeline-year"><i class="fas fa-calendar"></i>2020 - 2023</div>
+                        <div class="timeline-details">
+                            <p>• المرحلة التأسيسية لمشروع نيوم</p>
+                            <p>• إطلاق البنية التحتية الأساسية</p>
+                            <p>• بدء برنامج تطوير القطاع المالي</p>
+                            <p>• إصدار أول صكوك حكومية دولية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate" style="animation-delay: 0.1s;">
+                    <div class="timeline-content">
+                        <div class="timeline-year"><i class="fas fa-calendar"></i>2024 - 2025</div>
+                        <div class="timeline-details">
+                            <p>• بدء تشغيل أجزاء من مدينة THE LINE</p>
+                            <p>• توسع سوق التمويل الإسلامي</p>
+                            <p>• إطلاق أول منتجات FinTech</p>
+                            <p>• زيادة الاستثمارات الأجنبية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate" style="animation-delay: 0.2s;">
+                    <div class="timeline-content">
+                        <div class="timeline-year"><i class="fas fa-calendar"></i>2026 - 2028</div>
+                        <div class="timeline-details">
+                            <p>• اكتمال المرافق الرئيسية في نيوم</p>
+                            <p>• الوصول إلى 5% مساهمة القطاع المالي</p>
+                            <p>• تعميم الخدمات المالية الرقمية</p>
+                            <p>• جذب كوادر عالمية للعمل في نيوم</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate" style="animation-delay: 0.3s;">
+                    <div class="timeline-content">
+                        <div class="timeline-year"><i class="fas fa-calendar"></i>2029 - 2030</div>
+                        <div class="timeline-details">
+                            <p>• تشغيل نيوم بكامل طاقتها</p>
+                            <p>• تحقيق 6.6% مساهمة القطاع المالي</p>
+                            <p>• مركز مالي إقليمي رائد</p>
+                            <p>• نموذج عالمي للمدن الذكية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- محاكاة الاستثمار -->
+    <section id="simulation" class="section">
+        <div class="container">
+            <div class="simulation-section">
+                <div class="simulation-header">
+                    <h2 class="simulation-title">محاكاة الاستثمار والتأثير الاقتصادي</h2>
+                    <p class="simulation-subtitle">قم بتعديل المعايير وشاهد التأثير المتوقع على الاقتصاد السعودي بحلول 2030</p>
+                </div>
+                
+                <div class="simulation-controls">
+                    <div class="control-panel animate">
+                        <h3 class="control-title"><i class="fas fa-city control-icon"></i>الاستثمار في نيوم</h3>
+                        
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>مبلغ الاستثمار</span>
+                                <span class="slider-value" id="neomInvestValue">250</span> مليار دولار
+                            </div>
+                            <input type="range" min="100" max="500" value="250" class="slider" id="neomInvestSlider" oninput="updateSimulation()">
+                        </div>
+                        
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>معدل النمو السنوي</span>
+                                <span class="slider-value" id="neomGrowthValue">8</span>%
+                            </div>
+                            <input type="range" min="5" max="15" value="8" class="slider" id="neomGrowthSlider" oninput="updateSimulation()">
+                        </div>
+                        
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>نسبة التوطين</span>
+                                <span class="slider-value" id="neomLocalization">60</span>%
+                            </div>
+                            <input type="range" min="30" max="90" value="60" class="slider" id="neomLocalizationSlider" oninput="updateSimulation()">
+                        </div>
+                    </div>
+                    
+                    <div class="control-panel animate" style="animation-delay: 0.1s;">
+                        <h3 class="control-title"><i class="fas fa-chart-pie control-icon"></i>الاستثمار في القطاع المالي</h3>
+                        
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>مبلغ الاستثمار</span>
+                                <span class="slider-value" id="financeInvestValue">150</span> مليار ريال
+                            </div>
+                            <input type="range" min="50" max="300" value="150" class="slider" id="financeInvestSlider" oninput="updateSimulation()">
+                        </div>
+                        
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>معدل النمو السنوي</span>
+                                <span class="slider-value" id="financeGrowthValue">12</span>%
+                            </div>
+                            <input type="range" min="8" max="20" value="12" class="slider" id="financeGrowthSlider" oninput="updateSimulation()">
+                        </div>
+                        
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <span>نسبة الابتكار</span>
+                                <span class="slider-value" id="financeInnovation">75</span>%
+                            </div>
+                            <input type="range" min="40" max="100" value="75" class="slider" id="financeInnovationSlider" oninput="updateSimulation()">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-card animate" style="animation-delay: 0.2s;">
+                        <i class="fas fa-money-bill-wave result-icon"></i>
+                        <div class="result-value" id="totalInvestment">400</div>
+                        <div class="result-label">مليار ريال ودولار استثمار</div>
+                    </div>
+                    
+                    <div class="result-card animate" style="animation-delay: 0.3s;">
+                        <i class="fas fa-briefcase result-icon"></i>
+                        <div class="result-value" id="totalJobs">610,000</div>
+                        <div class="result-label">وظيفة جديدة بحلول 2030</div>
+                    </div>
+                    
+                    <div class="result-card animate" style="animation-delay: 0.4s;">
+                        <i class="fas fa-chart-bar result-icon"></i>
+                        <div class="result-value" id="totalGDP">180</div>
+                        <div class="result-label">مليار ريال مساهمة في الناتج</div>
+                    </div>
+                    
+                    <div class="result-card animate" style="animation-delay: 0.5s;">
+                        <i class="fas fa-hand-holding-usd result-icon"></i>
+                        <div class="result-value" id="totalReturn">1.2</div>
+                        <div class="result-label">تريليون ريال عائد متوقع</div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary pulse" onclick="showResults()" style="margin: 40px auto 0; display: block; padding: 18px 50px; font-size: 1.2rem;">
+                    <i class="fas fa-calculator"></i>عرض النتائج التفصيلية
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- المخطط البياني -->
+    <section id="chart" class="section">
+        <div class="container">
+            <div class="chart-section">
+                <div class="section-header">
+                    <h2 class="section-title">توزيع الاستثمارات بين المشروعين</h2>
+                    <p class="section-subtitle">مقارنة مرئية لحجم الاستثمارات والتوزيع بين مختلف القطاعات</p>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-bars">
+                        <div class="chart-bar bar-neom" id="barNeom">
+                            <div class="bar-value" id="barNeomValue">70%</div>
+                            <div class="bar-label">نيوم</div>
+                        </div>
+                        <div class="chart-bar bar-finance" id="barFinance">
+                            <div class="bar-value" id="barFinanceValue">30%</div>
+                            <div class="bar-label">القطاع المالي</div>
+                        </div>
+                        <div class="chart-bar bar-infra" id="barInfra">
+                            <div class="bar-value" id="barInfraValue">50%</div>
+                            <div class="bar-label">البنية التحتية</div>
+                        </div>
+                        <div class="chart-bar bar-tech" id="barTech">
+                            <div class="bar-value" id="barTechValue">65%</div>
+                            <div class="bar-label">التقنية</div>
+                        </div>
+                        <div class="chart-bar bar-research" id="barResearch">
+                            <div class="bar-value" id="barResearchValue">40%</div>
+                            <div class="bar-label">البحث والتطوير</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-primary" onclick="randomizeChart()">
+                        <i class="fas fa-random"></i>تغيير القيم عشوائياً
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المقارنة -->
+    <section id="comparison" class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مقارنة شاملة بين المشروعين</h2>
+                <p class="section-subtitle">فهم التكامل والتداخل بين مشروع نيوم وبرنامج تطوير القطاع المالي</p>
+            </div>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card neom-comparison animate">
+                    <div class="comparison-header">
+                        <i class="fas fa-city comparison-icon"></i>
+                        <h3 class="comparison-title">مشروع نيوم</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>مشروع حضري مستقبلي عملاق</li>
+                        <li>استثمار 500 مليار دولار</li>
+                        <li>مدينة ذكية ومستدامة بالكامل</li>
+                        <li>مركز عالمي للابتكار والتقنية</li>
+                        <li>طاقة متجددة بنسبة 100%</li>
+                        <li>380,000 وظيفة جديدة مباشرة</li>
+                        <li>تأثير طويل المدى على الاقتصاد</li>
+                        <li>نموذج للمدن المستقبلية</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card finance-comparison animate" style="animation-delay: 0.1s;">
+                    <div class="comparison-header">
+                        <i class="fas fa-chart-line comparison-icon"></i>
+                        <h3 class="comparison-title">القطاع المالي</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>تحول اقتصادي شامل ومنهجي</li>
+                        <li>تطوير كامل للنظام المالي</li>
+                        <li>مركز مالي إقليمي وعالمي</li>
+                        <li>ريادة في التمويل الإسلامي</li>
+                        <li>شمول مالي رقمي متكامل</li>
+                        <li>230,000 وظيفة مستهدفة</li>
+                        <li>تأثير فوري ومستدام</li>
+                        <li>دعم لجميع القطاعات الاقتصادية</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card integration-comparison animate" style="animation-delay: 0.2s;">
+                    <div class="comparison-header">
+                        <i class="fas fa-handshake comparison-icon"></i>
+                        <h3 class="comparison-title">التكامل والتداخل</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>تمويل مشروع نيوم من خلال القطاع المالي</li>
+                        <li>تطوير منتجات مالية مبتكرة لنيوم</li>
+                        <li>استثمارات مشتركة وشراكات استراتيجية</li>
+                        <li>تبادل الخبرات والكفاءات</li>
+                        <li>اقتصاد معرفي متكامل ومتنوع</li>
+                        <li>تعزيز الابتكار في كلا المجالين</li>
+                        <li>تنمية مستدامة شاملة ومتوازنة</li>
+                        <li>تحقيق أهداف رؤية 2030 بشكل متكامل</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن المشروع</h3>
+                    <p style="margin-bottom: 20px; opacity: 0.9;">موقع تعريفي بمشروعي نيوم وتطوير القطاع المالي ضمن رؤية السعودية 2030، يهدف إلى نشر الوعي وتبسيط المعلومات للجمهور.</p>
+                    <a href="https://github.com" class="github-button" target="_blank">
+                        <i class="fab fa-github"></i>رفع المشروع على GitHub
+                    </a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-left"></i>الرئيسية</a></li>
+                        <li><a href="#neom"><i class="fas fa-chevron-left"></i>مشروع نيوم</a></li>
+                        <li><a href="#finance"><i class="fas fa-chevron-left"></i>القطاع المالي</a></li>
+                        <li><a href="#timeline"><i class="fas fa-chevron-left"></i>الجدول الزمني</a></li>
+                        <li><a href="#simulation"><i class="fas fa-chevron-left"></i>محاكاة الاستثمار</a></li>
+                        <li><a href="#comparison"><i class="fas fa-chevron-left"></i>المقارنة</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p style="margin-bottom: 20px; opacity: 0.9;">للمزيد من المعلومات حول رؤية السعودية 2030 ومشاريعها العملاقة</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 رؤية السعودية 2030 - جميع الحقوق محفوظة | مشروع تعليمي توعوي</p>
+                <p style="margin-top: 10px;">تم التصميم والبرمجة باستخدام HTML5، CSS3، وJavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نموذج التفاصيل -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 class="modal-title" id="modalTitle">تفاصيل المشروع</h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // بيانات المشاريع
+        const projectsData = {
+            neom: {
+                title: "مشروع نيوم - مدينة المستقبل",
+                content: `
+                    <div style="padding: 20px;">
+                        <h3 style="color: var(--neom-teal); margin-bottom: 20px; border-bottom: 2px solid var(--medium-gray); padding-bottom: 10px;">تفاصيل المشروع:</h3>
+                        <p style="margin-bottom: 20px; line-height: 1.8;">نيوم هو مشروع سعودي لمدينة مخطط لبنائها عابرة للحدود، أعلن عنهُ الأمير محمد بن سلمان ولي العهد السعودي في يوم 24 أكتوبر 2017. يمثل المشروع رؤية طموحة لبناء مدينة المستقبل الأولى من نوعها في العالم.</p>
+                        
+                        <div class="stats-grid" style="margin: 30px 0;">
+                            <div class="stat-item">
+                                <span class="stat-number">500</span>
+                                <span class="stat-label">مليار دولار استثمار</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">380,000</span>
+                                <span class="stat-label">وظيفة جديدة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">26,500</span>
+                                <span class="stat-label">كم² المساحة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">9</span>
+                                <span class="stat-label">مليون نسمة سعة</span>
+                            </div>
+                        </div>
+                        
+                        <h3 style="color: var(--neom-teal); margin: 30px 0 15px;">المكونات الرئيسية:</h3>
+                        <ul style="list-style: none; padding-right: 20px;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>THE LINE:</strong> مدينة خطية بطول 170 كم بدون سيارات أو شوارع</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>أوكساجون:</strong> مركز صناعي عائم على البحر الأحمر</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>تروجينا:</strong> وجهة سياحية فاخرة على البحر الأحمر</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>سندالة:</strong> منتجع جبلي للترفيه والرياضات الشتوية</li>
+                        </ul>
+                        
+                        <h3 style="color: var(--neom-teal); margin: 30px 0 15px;">الأهداف الاستراتيجية:</h3>
+                        <ul style="list-style: none; padding-right: 20px;">
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--neom-teal);">✓</span>إنشاء نموذج جديد للعيش والعمل في المستقبل</li>
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--neom-teal);">✓</span>تطوير اقتصاد معرفي متنوع ومستدام</li>
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--neom-teal);">✓</span>جذب أفضل العقول والمواهب من حول العالم</li>
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--neom-teal);">✓</span>الريادة في مجالات الطاقة النظيفة والتقنية المتقدمة</li>
+                        </ul>
+                        
+                        <div style="background: var(--light-gray); padding: 25px; border-radius: 10px; margin-top: 30px;">
+                            <h4 style="color: var(--primary-blue); margin-bottom: 15px;">التأثير الاقتصادي المتوقع:</h4>
+                            <p>بحلول عام 2030، من المتوقع أن يساهم مشروع نيوم بما يقارب 180 مليار ريال في الناتج المحلي الإجمالي للمملكة، مع خلق سلسلة قيمة اقتصادية تمتد لتشمل مختلف القطاعات.</p>
+                        </div>
+                    </div>
+                `
+            },
+            finance: {
+                title: "برنامج تطوير القطاع المالي",
+                content: `
+                    <div style="padding: 20px;">
+                        <h3 style="color: var(--finance-purple); margin-bottom: 20px; border-bottom: 2px solid var(--medium-gray); padding-bottom: 10px;">تفاصيل البرنامج:</h3>
+                        <p style="margin-bottom: 20px; line-height: 1.8;">برنامج تطوير القطاع المالي هو أحد برامج تحقيق رؤية السعودية 2030، ويهدف إلى تحويل المملكة إلى مركز مالي إقليمي وعالمي من خلال تطوير شامل للنظام المالي السعودي.</p>
+                        
+                        <div class="stats-grid" style="margin: 30px 0;">
+                            <div class="stat-item">
+                                <span class="stat-number">4.6</span>
+                                <span class="stat-label">تريليون ريال أصول</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">6.6</span>
+                                <span class="stat-label">% مساهمة في الناتج</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">230,000</span>
+                                <span class="stat-label">وظيفة مستهدفة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">شركة FinTech</span>
+                            </div>
+                        </div>
+                        
+                        <h3 style="color: var(--finance-purple); margin: 30px 0 15px;">المحاور الرئيسية:</h3>
+                        <ul style="list-style: none; padding-right: 20px;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>سوق رأس المال:</strong> تطوير سوق الأسهم والسندات والصكوك</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>التمويل الإسلامي:</strong> تعزيز مكانة المملكة كمركز عالمي للتمويل الإسلامي</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>قطاع التأمين:</strong> تنمية وتنويع منتجات التأمين والتأمين الصحي</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid var(--medium-gray);"><strong>التحول الرقمي:</strong> تطوير الخدمات المالية الرقمية وتبني التقنيات الحديثة</li>
+                        </ul>
+                        
+                        <h3 style="color: var(--finance-purple); margin: 30px 0 15px;">الإنجازات حتى الآن:</h3>
+                        <ul style="list-style: none; padding-right: 20px;">
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--finance-purple);">✓</span>إدراج أرامكو في سوق الأسهم السعودي</li>
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--finance-purple);">✓</span>إصدار صكوك حكومية بقيمة 55 مليار دولار</li>
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--finance-purple);">✓</span>زيادة نسبة الشمول المالي إلى أكثر من 70%</li>
+                            <li style="padding: 8px 0; padding-right: 25px; position: relative;"><span style="position: absolute; right: 0; color: var(--finance-purple);">✓</span>تأسيس مركز الابتكار المالي وتطوير نظام Sandbox</li>
+                        </ul>
+                        
+                        <div style="background: var(--light-gray); padding: 25px; border-radius: 10px; margin-top: 30px;">
+                            <h4 style="color: var(--primary-blue); margin-bottom: 15px;">الأهداف المستقبلية 2030:</h4>
+                            <p>يستهدف البرنامج رفع مساهمة القطاع المالي في الناتج المحلي من 4.4% إلى 6.6%، وزيادة الأصول المالية من 2.9 تريليون ريال إلى 4.6 تريليون ريال، وتوفير 230,000 وظيفة جديدة في القطاع.</p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // تهيئة أشرطة التقدم
+            initializeProgressBars();
+            
+            // تحديث المحاكاة
+            updateSimulation();
+            
+            // إضافة تأثيرات الظهور
+            addScrollAnimations();
+            
+            // تهيئة المخطط البياني
+            initializeChart();
+            
+            console.log('تم تحميل مشروع رؤية السعودية 2030 بنجاح!');
+        });
+
+        // وظائف التمرير
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // وظائف النموذج المنبثق
+        function showModal(projectType) {
+            const modal = document.getElementById('detailsModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            title.textContent = projectsData[projectType].title;
+            body.innerHTML = projectsData[projectType].content;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('detailsModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // إغلاق النموذج عند النقر خارج المحتوى
+        window.onclick = function(event) {
+            const modal = document.getElementById('detailsModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        // تهيئة أشرطة التقدم
+        function initializeProgressBars() {
+            // شريط تقدم نيوم
+            const neomProgressBar = document.getElementById('neomProgressBar');
+            const neomProgressText = document.getElementById('neomProgressText');
+            
+            // شريط تقدم القطاع المالي
+            const financeProgressBar = document.getElementById('financeProgressBar');
+            const financeProgressText = document.getElementById('financeProgressText');
+            
+            // تعيين القيم
+            setTimeout(() => {
+                neomProgressBar.style.width = '45%';
+                neomProgressText.textContent = '45%';
+                
+                financeProgressBar.style.width = '60%';
+                financeProgressText.textContent = '60%';
+            }, 500);
+        }
+
+        // محاكاة الاستثمار
+        function updateSimulation() {
+            // الحصول على القيم من السلايدرات
+            const neomInvest = parseInt(document.getElementById('neomInvestSlider').value);
+            const neomGrowth = parseInt(document.getElementById('neomGrowthSlider').value) / 100;
+            const neomLocalization = parseInt(document.getElementById('neomLocalizationSlider').value) / 100;
+            
+            const financeInvest = parseInt(document.getElementById('financeInvestSlider').value);
+            const financeGrowth = parseInt(document.getElementById('financeGrowthSlider').value) / 100;
+            const financeInnovation = parseInt(document.getElementById('financeInnovationSlider').value) / 100;
+            
+            // تحديث القيم المعروضة
+            document.getElementById('neomInvestValue').textContent = neomInvest;
+            document.getElementById('neomGrowthValue').textContent = neomGrowth * 100;
+            document.getElementById('neomLocalization').textContent = neomLocalization * 100;
+            
+            document.getElementById('financeInvestValue').textContent = financeInvest;
+            document.getElementById('financeGrowthValue').textContent = financeGrowth * 100;
+            document.getElementById('financeInnovation').textContent = financeInnovation * 100;
+            
+            // الحسابات
+            const totalInvestment = neomInvest + financeInvest;
+            const yearsTo2030 = 6; // من 2024 إلى 2030
+            
+            // حساب الوظائف (تقديري)
+            const neomJobs = Math.floor(neomInvest * 760 * neomLocalization); // كل مليار دولار = 760 وظيفة
+            const financeJobs = Math.floor(financeInvest * 1533 * financeInnovation); // كل مليار ريال = 1533 وظيفة
+            const totalJobs = neomJobs + financeJobs;
+            
+            // حساب المساهمة في الناتج (تقديري)
+            const neomGDP = Math.floor(neomInvest * 3.6 * 3.75); // مليار دولار × 3.6 مليار ريال × سعر الصرف
+            const financeGDP = Math.floor(financeInvest * 1.2); // مليار ريال × 1.2 مليار ريال
+            const totalGDP = Math.floor((neomGDP + financeGDP) / 10); // تقسيم للعرض
+            
+            // حساب العائد المتوقع
+            const neomReturn = neomInvest * Math.pow(1 + neomGrowth, yearsTo2030) * 3.75; // تحويل الدولار لريال
+            const financeReturn = financeInvest * Math.pow(1 + financeGrowth, yearsTo2030);
+            const totalReturn = Math.floor((neomReturn + financeReturn) / 1000); // تقسيم للعرض
+            
+            // تحديث النتائج
+            document.getElementById('totalInvestment').textContent = totalInvestment.toLocaleString();
+            document.getElementById('totalJobs').textContent = totalJobs.toLocaleString();
+            document.getElementById('totalGDP').textContent = totalGDP.toLocaleString();
+            document.getElementById('totalReturn').textContent = totalReturn.toFixed(1);
+            
+            // تحديث المخطط البياني
+            updateChart(neomInvest, financeInvest);
+        }
+
+        // تهيئة المخطط البياني
+        function initializeChart() {
+            // قيم افتراضية
+            const values = {
+                neom: 70,
+                finance: 30,
+                infra: 50,
+                tech: 65,
+                research: 40
+            };
+            
+            // تعيين القيم
+            updateChart(250, 150);
+        }
+
+        function updateChart(neomInvest, financeInvest) {
+            // حساب النسب المئوية
+            const total = neomInvest + financeInvest;
+            const neomPercent = Math.round((neomInvest / 500) * 70); // نسبة من 500 مليار
+            const financePercent = Math.round((financeInvest / 300) * 50); // نسبة من 300 مليار
+            
+            // قيم عشوائية للمكونات الأخرى (للتوضيح)
+            const infraPercent = 40 + Math.random() * 20;
+            const techPercent = 50 + Math.random() * 30;
+            const researchPercent = 30 + Math.random() * 20;
+            
+            // تحديث الأعمدة
+            const bars = {
+                neom: document.getElementById('barNeom'),
+                finance: document.getElementById('barFinance'),
+                infra: document.getElementById('barInfra'),
+                tech: document.getElementById('barTech'),
+                research: document.getElementById('barResearch')
+            };
+            
+            const values = {
+                neom: document.getElementById('barNeomValue'),
+                finance: document.getElementById('barFinanceValue'),
+                infra: document.getElementById('barInfraValue'),
+                tech: document.getElementById('barTechValue'),
+                research: document.getElementById('barResearchValue')
+            };
+            
+            // تعيين القيم
+            bars.neom.style.height = neomPercent + '%';
+            values.neom.textContent = neomPercent + '%';
+            
+            bars.finance.style.height = financePercent + '%';
+            values.finance.textContent = financePercent + '%';
+            
+            bars.infra.style.height = infraPercent + '%';
+            values.infra.textContent = Math.round(infraPercent) + '%';
+            
+            bars.tech.style.height = techPercent + '%';
+            values.tech.textContent = Math.round(techPercent) + '%';
+            
+            bars.research.style.height = researchPercent + '%';
+            values.research.textContent = Math.round(researchPercent) + '%';
+        }
+
+        // تغيير عشوائي للمخطط
+        function randomizeChart() {
+            const neomInvest = 100 + Math.random() * 400;
+            const financeInvest = 50 + Math.random() * 250;
+            
+            document.getElementById('neomInvestSlider').value = Math.round(neomInvest);
+            document.getElementById('financeInvestSlider').value = Math.round(financeInvest);
+            
+            updateSimulation();
+            
+            // تأثير مرئي
+            document.querySelector('.chart-section').style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                document.querySelector('.chart-section').style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // عرض النتائج التفصيلية
+        function showResults() {
+            const neomInvest = parseInt(document.getElementById('neomInvestSlider').value);
+            const financeInvest = parseInt(document.getElementById('financeInvestSlider').value);
+            const totalJobs = document.getElementById('totalJobs').textContent;
+            const totalGDP = document.getElementById('totalGDP').textContent;
+            const totalReturn = document.getElementById('totalReturn').textContent;
+            
+            const resultsHTML = `
+                <div style="padding: 20px;">
+                    <h3 style="color: var(--primary-green); margin-bottom: 25px; text-align: center;">نتائج محاكاة الاستثمار</h3>
+                    
+                    <div style="background: linear-gradient(135deg, var(--light-gray), #e3f2fd); padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px;">الاستثمارات المدخلة:</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 800; color: var(--neom-teal);">${neomInvest}</div>
+                                <div style="color: var(--dark-gray); font-size: 0.9rem;">مليار دولار في نيوم</div>
+                            </div>
+                            <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 800; color: var(--finance-purple);">${financeInvest}</div>
+                                <div style="color: var(--dark-gray); font-size: 0.9rem;">مليار ريال في القطاع المالي</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, var(--light-gray), #f3e5f5); padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px;">التأثير الاقتصادي المتوقع بحلول 2030:</h4>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                            <div style="background: white; padding: 20px; border-radius: 8px; text-align: center;">
+                                <i class="fas fa-briefcase" style="color: var(--primary-green); font-size: 2rem; margin-bottom: 10px;"></i>
+                                <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-blue);">${totalJobs}</div>
+                                <div style="color: var(--dark-gray);">وظيفة جديدة</div>
+                            </div>
+                            <div style="background: white; padding: 20px; border-radius: 8px; text-align: center;">
+                                <i class="fas fa-chart-bar" style="color: var(--primary-green); font-size: 2rem; margin-bottom: 10px;"></i>
+                                <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-blue);">${totalGDP}</div>
+                                <div style="color: var(--dark-gray);">مليار ريال في الناتج</div>
+                            </div>
+                            <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; grid-column: span 2;">
+                                <i class="fas fa-hand-holding-usd" style="color: var(--primary-green); font-size: 2rem; margin-bottom: 10px;"></i>
+                                <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary-blue);">${totalReturn} تريليون</div>
+                                <div style="color: var(--dark-gray);">ريال عائد استثماري متوقع</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: var(--light-gray); padding: 20px; border-radius: 10px; text-align: center;">
+                        <p style="color: var(--dark-gray); margin-bottom: 10px;"><i class="fas fa-info-circle" style="color: var(--primary-green);"></i> هذه النتائج تقديرية بناءً على نماذج اقتصادية مبسطة</p>
+                        <button class="btn btn-primary" onclick="resetSimulation()" style="margin-top: 10px;">
+                            <i class="fas fa-redo"></i> إعادة التعيين
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            const modal = document.getElementById('detailsModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            title.textContent = 'نتائج محاكاة الاستثمار';
+            body.innerHTML = resultsHTML;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // إعادة تعيين المحاكاة
+        function resetSimulation() {
+            document.getElementById('neomInvestSlider').value = 250;
+            document.getElementById('neomGrowthSlider').value = 8;
+            document.getElementById('neomLocalizationSlider').value = 60;
+            
+            document.getElementById('financeInvestSlider').value = 150;
+            document.getElementById('financeGrowthSlider').value = 12;
+            document.getElementById('financeInnovationSlider').value = 75;
+            
+            updateSimulation();
+            closeModal();
+            
+            // رسالة تأكيد
+            showNotification('تم إعادة تعيين المحاكاة إلى القيم الافتراضية');
+        }
+
+        // إضافة تأثيرات الظهور عند التمرير
+        function addScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+            
+            // مراقبة العناصر
+            const elementsToAnimate = document.querySelectorAll('.project-card, .timeline-item, .result-card, .comparison-card, .control-panel');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // عرض الإشعارات
+        function showNotification(message) {
+            // إنشاء عنصر الإشعار
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--primary-green);
+                color: white;
+                padding: 15px 30px;
+                border-radius: 50px;
+                box-shadow: var(--shadow-heavy);
+                z-index: 3000;
+                font-weight: 600;
+                animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+                animation-fill-mode: forwards;
+            `;
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // إزالة الإشعار بعد 3 ثوان
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 3000);
+            
+            // إضافة أنيميشنز CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from {
+                        top: 50px;
+                        opacity: 0;
+                    }
+                    to {
+                        top: 100px;
+                        opacity: 1;
+                    }
+                }
+                @keyframes fadeOut {
+                    from {
+                        opacity: 1;
+                    }
+                    to {
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // إنشاء ملفات GitHub
+        function generateGitHubFiles() {
+            const files = {
+                'index.html': document.documentElement.outerHTML,
+                'README.md': generateReadme(),
+                '.gitignore': generateGitIgnore(),
+                'LICENSE': generateLicense()
+            };
+            
+            console.log('ملفات GitHub جاهزة للتنزيل!');
+            console.log('استخدم generateGitHubFiles() للحصول على الملفات');
+            
+            return files;
+        }
+
+        function generateReadme() {
+            return `# مشروع رؤية السعودية 2030 - نيوم والقطاع المالي
+
+## 🌟 نظرة عامة
+موقع ويب تفاعلي لعرض مشروعي نيوم وتطوير القطاع المالي ضمن رؤية السعودية 2030. يهدف المشروع إلى توعية الجمهور بأهمية هذه المشاريع العملاقة وتأثيرها على مستقبل المملكة.
+
+## ✨ المميزات
+- تصميم عصري ومتجاوب مع جميع الأجهزة
+- واجهة مستخدم عربية بالكامل (RTL)
+- محاكاة تفاعلية للاستثمارات والتأثير الاقتصادي
+- مخططات بيانية تفاعلية
+- معلومات شاملة عن المشروعين
+- جدول زمني تفاعلي
+- مقارنة شاملة بين المشروعين
+
+## 📊 المشاريع المغطاة
+
+### 🏙️ مشروع نيوم
+- مدينة المستقبل الذكية والمستدامة
+- استثمار 500 مليار دولار
+- 380,000 وظيفة جديدة
+- طاقة متجددة بنسبة 100%
+- مدينة خطية بطول 170 كم (THE LINE)
+
+### 💰 برنامج تطوير القطاع المالي
+- تحول النظام المالي السعودي
+- مركز مالي إقليمي وعالمي
+- 230,000 وظيفة مستهدفة
+- تطوير التمويل الإسلامي
+- التحول الرقمي في الخدمات المالية
+
+## 🛠️ التقنيات المستخدمة
+- **HTML5**: بناء الهيكل الأساسي
+- **CSS3**: التصميم والتنسيق (Grid, Flexbox, Animations)
+- **JavaScript**: التفاعل والديناميكية
+- **Font Awesome**: الأيقونات
+- **Google Fonts**: خط Cairo للغة العربية
+
+## 🚀 كيفية التشغيل
+1. قم بحفظ الملف كـ \`index.html\`
+2. افتح الملف في أي متصفح حديث (Chrome, Firefox, Edge)
+3. لا يحتاج إلى أي إعدادات إضافية
+
+## 🌐 نشر على GitHub Pages
+1. أنشئ repository جديد على GitHub
+2. ارفع ملف \`index.html\`
+3. اذهب إلى Settings → Pages
+4. اختر فرع main ومجلد /root
+5. احفظ وسيتم النشر تلقائياً
+
+## 📱 التوافق
+- جميع المتصفحات الحديثة
+- الأجهزة المحمولة والأجهزة اللوحية
+- دعم كامل للغة العربية (RTL)
+- تصميم متجاوب مع جميع الشاشات
+
+## 🤝 المساهمة
+1. Fork المشروع
+2. أنشئ فرع جديد
+3. قم بالتعديلات المطلوبة
+4. افتح Pull Request
+
+## 📄 الرخصة
+هذا المشروع مرخص تحت رخصة MIT.
+
+## 📧 معلومات الاتصال
+- **النوع**: مشروع تعليمي توعوي
+- **اللغة**: العربية
+- **الهدف**: نشر الوعي برؤية السعودية 2030
+
+---
+تم التطوير باستخدام أحدث تقنيات الويب لخدمة رؤية المملكة العربية السعودية 2030`;
+        }
+
+        function generateGitIgnore() {
+            return `# ملفات النظام
+.DS_Store
+Thumbs.db
+
+# ملفات السجلات
+*.log
+npm-debug.log*
+
+# ملفات البيئة
+.env
+.env.local
+
+# ملفات التبعيات
+node_modules/
+
+# ملفات البناء
+dist/
+build/
+
+# ملفات IDE
+.vscode/
+.idea/
+
+# ملفات مؤقتة
+*.tmp
+*.temp`;
+        }
+
+        function generateLicense() {
+            return `MIT License
+
+Copyright (c) 2024 رؤية السعودية 2030 - مشروع نيوم والقطاع المالي
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`;
+        }
+    </script>
+</body>
+</html>
